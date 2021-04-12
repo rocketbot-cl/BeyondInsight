@@ -25,7 +25,8 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 """
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + "modules" + os.sep + "BeyondInsight" + os.sep + "libs" + os.sep
-sys.path.append(cur_path)
+if cur_path not in sys.path:
+        sys.path.append(cur_path)
 """
     Obtengo el modulo que fue invocado
 """
