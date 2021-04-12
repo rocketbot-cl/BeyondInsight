@@ -33,18 +33,18 @@ if cur_path not in sys.path:
 
 module = GetParams("module")
 
-global base_api, session
+global base_api_server_bi, session_beyond_insight
 
 if module == "setCredentials":
     api_key = GetParams("api_key")
     run_as = GetParams("run_as")
     server = GetParams("server")
     try:
-        base_api = "https://{server}/BeyondTrust/api/public/v3".format(server=server)
+        base_api_server_bi = "https://{server}/BeyondTrust/api/public/v3".format(server=server)
         header_params = "PS-Authkey={api_key};runas={run_as};".format(api_key=api_key, run_as=run_as)
         header={'Authorization': header_params}
-        session = requests.Session()
-        session.headers.update(header)
+        session_beyond_insight = requests.Session()
+        session_beyond_insight.headers.update(header)
     except Exception as e:
         print("\x1B[" + "31;40mAn error occurred\x1B[" + "0m")
         PrintException()
@@ -54,8 +54,7 @@ if module == "getPasswords":
     import json
     result = GetParams("result")
     try:
-        api_url = api_client.host
-        response = session.post("base_api" + "/Auth/SignAppin")
+        response = session_beyond_insight.post("base_api" + "/Auth/SignAppin")
         data = response.json()
         SetVar(result, data)
     except Exception as e:
