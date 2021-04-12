@@ -54,7 +54,7 @@ if module == "getPasswords":
     import json
     result = GetParams("result")
     try:
-        response = session_beyond_insight.post("base_api" + "/Auth/SignAppin")
+        response = session_beyond_insight.post(base_api_server_bi + "/Auth/SignAppin")
         data = response.json()
         SetVar(result, data)
     except Exception as e:
