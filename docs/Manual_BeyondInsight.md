@@ -5,11 +5,11 @@
 # BeyondInsight
   
 BeyondInsight is BeyondTrust’s platform for centralized management, reporting, and threat analytics for privilege access management  
-
+  
+![banner](imgs/Banner_BeyondInsight.png)
 ## How to install this module
   
 __Download__ and __install__ the content in 'modules' folder in Rocketbot path  
-
 
 ## How to use this module
 To use this module, you must have a valid BeyondInsight license.
@@ -27,28 +27,20 @@ BeyondInsight generates a unique identifier (API Key) that the calling applicati
 Note: The API Registration page is only available to BeyondInsight administrators.
 
 
-## Overview
+## Description of the commands
 
-
-1. Set credentials  
-Set credentials to make available the API
-
-2. Get passwords  
-Get all passwords  
-
-
-
-
-----
-### OS
-
-- windows
-- mac
-- linux
-
-### Dependencies
-
-### License
+### Set credentials
   
-![MIT](https://camo.githubusercontent.com/107590fac8cbd65071396bb4d04040f76cde5bde/687474703a2f2f696d672e736869656c64732e696f2f3a6c6963656e73652d6d69742d626c75652e7376673f7374796c653d666c61742d737175617265)  
-[MIT](http://opensource.org/licenses/mit-license.ph)
+Set credentials to make available the API
+|Parameters|Description|example|
+| --- | --- | --- |
+|API Key ||c479a66f...c9484d|
+|Username||Admin|
+|Server||htpps://localhost:5001/|
+
+### Get passwords
+  
+Get all passwords
+|Parameters|Description|example|
+| --- | --- | --- |
+|Result||result|
