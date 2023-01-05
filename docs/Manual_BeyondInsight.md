@@ -1,7 +1,3 @@
-
-
-
-
 # BeyondInsight
   
 BeyondInsight is BeyondTrust’s platform for centralized management, reporting, and threat analytics for privilege access management  
